@@ -1,0 +1,36 @@
+// ================================
+// TYPOGRAPHY
+// ================================
+$font-primary:  'Manrope', sans-serif;
+$font-size-base: 16px;
+
+$text-xs:   0.75rem;    // 12px
+$text-sm:   0.875rem;   // 14px
+$text-md:   1rem;       // 16px
+$text-lg:   1.125rem;   // 18px
+$text-xl:   1.25rem;    // 20px
+$text-2xl:  1.5rem;     // 24px
+$text-3xl:  1.875rem;   // 30px
+$text-4xl:  2.25rem;    // 36px
+$text-5xl:  3rem;       // 48px  ← el hero title grande
+
+// ================================
+// SPACING
+// ================================
+$spacing-xs:  0.25rem;   // 4px
+$spacing-sm:  0.5rem;    // 8px
+$spacing-md:  1rem;      // 16px
+$spacing-lg:  1.5rem;    // 24px
+$spacing-xl:  2rem;      // 32px
+$spacing-2xl: 3rem;      // 48px
+$spacing-3xl: 5rem;      // 80px  ← padding de secciones
+
+// ================================
+// BORDER RADIUS
+// ================================
+$radius-sm:   0.25rem;  // 4px
+$radius-md:   0.5rem;   // 8px
+$radius-lg:   0.75rem;  // 12px
+$radius-xl:   1rem;     // 16px
+$radius-2xl:  1.5rem;   // 24px (rounded-2xl - componentes grandes)
+$radius-full: 9999px;   // pills, badges, botones (rounded-full)

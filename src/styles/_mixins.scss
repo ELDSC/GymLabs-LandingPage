@@ -1,0 +1,52 @@
+@use './variables' as *;
+@use './typography' as *;
+@use './animations' as *;
+
+// Responsive — uso: @include responsivo(md) { ... }
+@mixin responsivo($bp) {
+  @if $bp == sm  { @media (max-width: $bp-sm)  { @content; } }
+  @if $bp == md  { @media (max-width: $bp-md)  { @content; } }
+  @if $bp == lg  { @media (max-width: $bp-lg)  { @content; } }
+  @if $bp == xl  { @media (max-width: $bp-xl)  { @content; } }
+  @if $bp == 2xl { @media (max-width: $bp-2xl) { @content; } }
+}
+
+// Flexbox centrado rápido
+@mixin flex-centro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Contenedor principal
+@mixin contenedor {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+}
+
+// Truncar texto con ellipsis
+@mixin truncar {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// Botón primario reutilizable
+@mixin btn-primario {
+  background-color: $color-primary;
+  color: $text-primary;
+  padding: $spacing-sm $spacing-lg;
+  border-radius: $radius-full;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: $transition-base;
+  box-shadow: $shadow-primary;
+
+  &:hover {
+    background-color: $color-primary-dark;
+    transform: translateY(-1px);
+  }
+}

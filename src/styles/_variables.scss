@@ -1,0 +1,32 @@
+// ================================
+// COLORS
+// ================================
+
+// Brand
+$color-primary:       #10b981;   // Emerald 500 — botones de acción, iconos, resaltados
+$color-primary-dark:  #059669;   // hover del primary
+$color-primary-glow:  rgba(16, 185, 129, 0.25); // sombra/glow sutil en verde esmeralda
+
+// Backgrounds
+$bg-base:             #020617;   // fondo primario (Slate 950) - azul profundo casi negro
+$bg-surface:          #0f172a;   // superficies, tarjetas profundas (Slate 900)
+$bg-dark:             #0f172a;   // mismo que surface, mapeado para el footer
+$bg-surface-2:        #1e293b;   // inputs, hover de cards (Slate 800)
+$bg-overlay:          rgba(2, 6, 23, 0.85); // overlays y modales
+$bg-glass:            rgba(15, 23, 42, 0.65); // glassmorphism para navbar
+
+// Text
+$text-primary:        #f8fafc;   // Slate 50
+$text-secondary:      #cbd5e1;   // Slate 300
+$text-light:          #cbd5e1;   // mapeado para el footer
+$text-muted:          #94a3b8;   // Slate 400 - párrafos, labels, links del footer
+$text-disabled:       #475569;   // Slate 600
+
+// Borders
+$border-color:        #1e293b;   // bordes de cards sutiles
+$border-color-light:  #334155;   // bordes en hover
+
+// Semantic
+$color-success:       #10b981;   // Emerald 500
+$color-danger:        #ef4444;   // Red 500 (Ofertas/Alertas)
+$color-warning:       #f59e0b;   // Amber 500

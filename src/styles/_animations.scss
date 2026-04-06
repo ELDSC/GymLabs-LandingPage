@@ -1,0 +1,31 @@
+
+// ================================
+// SHADOWS
+// ================================
+$shadow-card:    0 4px 24px rgba(0, 0, 0, 0.4);
+$shadow-primary: 0 4px 20px rgba(16, 185, 129, 0.25);  // sombras difusas en verde esmeralda
+
+// ================================
+// TRANSITIONS
+// ================================
+$transition-fast:   all 0.15s ease;
+$transition-base:   all 0.25s ease;
+$transition-slow:   all 0.4s ease;
+
+// ================================
+// BREAKPOINTS
+// ================================
+$bp-sm:  576px;
+$bp-md:  768px;
+$bp-lg:  992px;
+$bp-xl:  1200px;
+$bp-2xl: 1400px;
+
+// ================================
+// Z-INDEX
+// ================================
+$z-base:    1;
+$z-dropdown: 100;
+$z-navbar:   200;
+$z-modal:    300;
+$z-toast:    400;

@@ -1,0 +1,160 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/animations' as *;
+@use '../../../styles/typography' as *;
+@use '../../../styles/reset' as *;
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: $z-navbar;
+    background-color: $bg-surface;
+    border-bottom: 1px solid $border-color;
+
+    &__contenedor{
+        @include contenedor;
+        @include flex-centro;
+        justify-content: space-between;
+        height: 64px; 
+    }
+
+  // Logo con degradado
+  &__logo {
+    font-size: $text-xl;
+    font-weight: 700;
+    color: $color-primary;
+    letter-spacing: -0.02em;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  // Links desktop
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xl;
+
+    @include responsivo(md) {
+      display: none; // se ocultan en móvil
+    }
+  }
+
+  &__link {
+    color: $text-muted;
+    font-size: $text-sm;
+    font-weight: 500;
+    transition: $transition-fast;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: $color-primary;
+      border-radius: $radius-full;
+      transition: $transition-base;
+    }
+
+    &:hover {
+      color: $text-primary;
+
+      &::after { width: 100%; }
+    }
+
+    &--active {
+      color: $color-primary;
+
+      &::after { width: 100%; }
+    }
+  }
+
+  // Acciones (iconos)
+  &__acciones {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &__icono-btn {
+    @include flex-centro;
+    width: 36px;
+    height: 36px;
+    border-radius: $radius-md;
+    background: transparent;
+    border: none;
+    color: $text-muted;
+    transition: $transition-fast;
+
+    &:hover {
+      background-color: $bg-surface-2;
+      color: $text-primary;
+    }
+  }
+
+  // Hamburger
+  &__hamburger {
+    @include flex-centro;
+    flex-direction: column;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;  // oculto en desktop
+
+    span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $text-secondary;
+      border-radius: $radius-full;
+      transition: $transition-base;
+    }
+
+    // Animación a X cuando está abierto
+    &.is-open {
+      span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      span:nth-child(2) { opacity: 0; }
+      span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+
+    @include responsivo(md) {
+      display: flex;
+    }
+  }
+
+  // Menú móvil
+  &__mobile {
+    display: flex;
+    flex-direction: column;
+    background-color: $bg-surface;
+    border-top: 1px solid $border-color;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+
+    &.is-open {
+      max-height: 400px;
+      padding: $spacing-md 0;
+    }
+  }
+
+  &__mobile-link {
+    padding: $spacing-sm $spacing-lg;
+    color: $text-muted;
+    font-size: $text-md;
+    font-weight: 500;
+    transition: $transition-fast;
+
+    &:hover, &.navbar__link--active {
+      color: $color-primary;
+      background-color: $bg-surface-2;
+    }
+  }
+}
